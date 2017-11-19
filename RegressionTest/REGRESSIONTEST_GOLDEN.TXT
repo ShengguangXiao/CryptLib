@@ -1,0 +1,15 @@
+Failed to encrypt file ./data/Not Exit file
+Failed to open file ./data/Not Exit file
+Success to encrypt file ./data/Empty.txt
+The encrypted file is the same as original file
+Success to decrypt file ./data/Empty.txt.Enc
+The decrypted file is the same as original file
+Success to encrypt file ./data/CommandLines.txt
+Success to decrypt file ./data/CommandLines.txt.Enc
+The decrypted file is the same as original file
+Success to encrypt file ./data/OCR.png
+Success to decrypt file ./data/OCR.png.Enc
+The decrypted file is the same as original file
+Success to encrypt file ./data/F8-58-2.bmp
+Success to decrypt file ./data/F8-58-2.bmp.Enc
+The decrypted file is the same as original file
