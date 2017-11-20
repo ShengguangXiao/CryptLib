@@ -24,7 +24,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EncryptLib.h">
+    <ClInclude Include="CryptLib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EncryptLib.cpp">
+    <ClCompile Include="CryptLib.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

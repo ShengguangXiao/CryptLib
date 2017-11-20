@@ -38,3 +38,4 @@
 *.sdf
 *.idb
 RegressionTest/RegressionTest_result.txt
+*.ipch

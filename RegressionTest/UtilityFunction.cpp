@@ -4,9 +4,9 @@
 #include <sstream>
 #include <iostream>
 
-#include "../CryptLib/EncryptLib.h"
+#include "../CryptLib/CryptLib.h"
 
-using namespace AOI::Encrypt;
+using namespace AOI::Crypt;
 
 bool isFileSame(const std::string &strFilePathOne, const std::string &strFilePathTwo) {
     std::ifstream fsOne( strFilePathOne, std::ios::in | std::ios::binary | std::ios::ate );

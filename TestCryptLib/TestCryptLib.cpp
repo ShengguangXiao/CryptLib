@@ -2,9 +2,9 @@
 //
 
 #include "stdafx.h"
-#include "../CryptLib/EncryptLib.h"
+#include "../CryptLib/CryptLib.h"
 
-using namespace AOI::Encrypt;
+using namespace AOI::Crypt;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
