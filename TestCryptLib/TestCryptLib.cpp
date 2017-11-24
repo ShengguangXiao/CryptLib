@@ -8,8 +8,8 @@ using namespace AOI::Crypt;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    EncryptFile ( "./data/OCR_Test.png", "./data/OCR_Test_Enc.png");
-    DecryptFile ( "./data/OCR_Test_Enc.png", "./data/OCR_Test_New.png");
+    EncryptFileNfg ( "./data/OCR_Test.png", "./data/OCR_Test_Enc.png");
+    DecryptFileNfg ( "./data/OCR_Test_Enc.png", "./data/OCR_Test_New.png");
 	return 0;
 }
 

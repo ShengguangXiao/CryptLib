@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#define DLLEXPORT
 #include "CryptLib.h"
 #include <fstream>
 #include <sstream>
@@ -13,7 +14,7 @@ const int KEY_SIZE = sizeof(KEY) / sizeof(char);
 const char SIGN[] = {1, -1};
 static std::string g_strErrorMsg;
 
-int EncryptFile(const std::string &strInputFilePath, const std::string &strOutputFilePath) {
+VisionAPI int EncryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath) {
     std::ifstream fsIn( strInputFilePath, std::ios::in | std::ios::binary | std::ios::ate );
     if ( ! fsIn.is_open() ) {
         std::stringstream ss;
@@ -54,7 +55,7 @@ int EncryptFile(const std::string &strInputFilePath, const std::string &strOutpu
     return 0;
 }
 
-int DecryptFile(const std::string &strInputFilePath, const std::string &strOutputFilePath) {
+VisionAPI int DecryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath) {
     std::ifstream fsIn( strInputFilePath, std::ios::in | std::ios::binary | std::ios::ate );
     if ( ! fsIn.is_open() ) {
         std::stringstream ss;

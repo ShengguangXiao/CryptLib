@@ -52,7 +52,7 @@ bool isFileSame(const std::string &strFilePathOne, const std::string &strFilePat
 bool TestEncryptDecrypt(const std::string &strFilePath) {
     std::string strEncFilePath = strFilePath + ".Enc";
     std::string strDecFilePath = strFilePath + ".Dec";
-    int nResult = EncryptFile ( strFilePath, strEncFilePath);
+    int nResult = EncryptFileNfg ( strFilePath, strEncFilePath);
     if ( nResult != 0 ) {
         std::cout << "Failed to encrypt file " << strFilePath << std::endl;
         std::cout << GetErrorMsg() << std::endl;
@@ -64,7 +64,7 @@ bool TestEncryptDecrypt(const std::string &strFilePath) {
         std::cout << "The encrypted file is the same as original file" << std::endl;
     }
 
-    nResult = DecryptFile ( strEncFilePath, strDecFilePath );
+    nResult = DecryptFileNfg ( strEncFilePath, strDecFilePath );
     if ( nResult != 0 ) {
         std::cout << "Failed to decrypt file " << strEncFilePath << std::endl;
         std::cout << GetErrorMsg() << std::endl;

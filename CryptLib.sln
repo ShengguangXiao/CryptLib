@@ -1,11 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CryptLib", "CryptLib\CryptLib.vcxproj", "{F559F9D7-4712-4523-9ADE-F3C552E52D70}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCryptLib", "TestCryptLib\TestCryptLib.vcxproj", "{34ECAA17-44B0-4FEC-9D9A-45C8D14C76F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F559F9D7-4712-4523-9ADE-F3C552E52D70} = {F559F9D7-4712-4523-9ADE-F3C552E52D70}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RegressionTest", "RegressionTest\RegressionTest.vcxproj", "{37B48766-FC02-4620-B271-5EDC5B2F79B4}"
 EndProject
