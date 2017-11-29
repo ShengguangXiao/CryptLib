@@ -41,3 +41,4 @@ RegressionTest/RegressionTest_result.txt
 *.ipch
 *.exp
 *.cache
+*.suo
