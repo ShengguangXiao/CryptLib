@@ -8,8 +8,16 @@ using namespace AOI::Crypt;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    EncryptFileNfg ( "./data/OCR_Test.png", "./data/OCR_Test_Enc.png");
-    DecryptFileNfg ( "./data/OCR_Test_Enc.png", "./data/OCR_Test_New.png");
+    std::string strFolder("C:/Users/shenxiao/Downloads/1208104230/");
+    //EncryptFileNfg ( "./data/OCR_Test.png", "./data/OCR_Test_Enc.png");
+    for ( int i = 1; i <= 12; ++ i ) {
+        char chIndex[10];
+        sprintf ( chIndex, "%02d", i );
+        std::string strInputFile = strFolder + chIndex + ".ent";
+        std::string strOutputFile = strFolder + chIndex + ".bmp";
+        DecryptFileNfg (strInputFile, strOutputFile );
+    }
+    
 	return 0;
 }
 
