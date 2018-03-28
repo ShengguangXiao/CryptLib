@@ -2,9 +2,9 @@
 #define _AOI_CRYPT_LIB_H_
 
 #ifdef DLLEXPORT
-    #define VisionAPI   __declspec(dllexport)
+    #define EncryptFileAPI   __declspec(dllexport)
 #else
-    #define VisionAPI   __declspec(dllimport)
+    #define EncryptFileAPI   __declspec(dllimport)
 #endif
 
 #include <string>
@@ -15,11 +15,11 @@ namespace Crypt
 {
 
 //Return 0 means success, other wise is fail.
-VisionAPI int EncryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath);
-VisionAPI int DecryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath);
-VisionAPI std::string GetErrorMsg();
+EncryptFileAPI int EncryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath);
+EncryptFileAPI int DecryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath);
+EncryptFileAPI std::string GetErrorMsg();
 
 }
 }
 
-#endif _AOI_CRYPT_LIB_H_
+#endif /*_AOI_CRYPT_LIB_H_*/
