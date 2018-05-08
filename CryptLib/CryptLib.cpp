@@ -17,14 +17,15 @@ EncryptFileAPI int EncryptFileNfg(const std::string &strInputFilePath, const std
     std::ifstream fsIn(strInputFilePath, std::ios::in | std::ios::binary | std::ios::ate);
     if (! fsIn.is_open()) {
         std::stringstream ss;
-        ss << "Failed to open file " << strInputFilePath;
+        ss << "Failed to open file \"" << strInputFilePath << "\".";
         g_strErrorMsg = ss.str();
         return -1;
     }
+
     std::ofstream fsOut(strOutputFilePath, std::ios::out | std::ios::binary);
     if (! fsIn.is_open()) {
         std::stringstream ss;
-        ss << "Failed to open file " << strInputFilePath;
+        ss << "Failed to open file \"" << strOutputFilePath << "\".";
         g_strErrorMsg = ss.str();
         return -1;
     }
@@ -58,14 +59,14 @@ EncryptFileAPI int DecryptFileNfg(const std::string &strInputFilePath, const std
     std::ifstream fsIn(strInputFilePath, std::ios::in | std::ios::binary | std::ios::ate);
     if (! fsIn.is_open()) {
         std::stringstream ss;
-        ss << "Failed to open file " << strInputFilePath;
+        ss << "Failed to open file \"" << strInputFilePath << "\".";
         g_strErrorMsg = ss.str();
         return -1;
     }
     std::ofstream fsOut(strOutputFilePath, std::ios::out | std::ios::binary);
     if (! fsIn.is_open()) {
         std::stringstream ss;
-        ss << "Failed to open file " << strInputFilePath;
+        ss << "Failed to open file \"" << strOutputFilePath << "\".";
         g_strErrorMsg = ss.str();
         return -1;
     }
