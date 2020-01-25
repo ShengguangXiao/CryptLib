@@ -43,3 +43,4 @@ RegressionTest/RegressionTest_result.txt
 *.cache
 *.suo
 *.bak
+*.data

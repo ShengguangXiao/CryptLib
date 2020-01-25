@@ -15,7 +15,7 @@ static std::string g_strErrorMsg;
 
 EncryptFileAPI int EncryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath) {
     std::ifstream fsIn(strInputFilePath, std::ios::in | std::ios::binary | std::ios::ate);
-    if (! fsIn.is_open()) {
+    if (!fsIn.is_open()) {
         std::stringstream ss;
         ss << "Failed to open file \"" << strInputFilePath << "\".";
         g_strErrorMsg = ss.str();
@@ -23,7 +23,7 @@ EncryptFileAPI int EncryptFileNfg(const std::string &strInputFilePath, const std
     }
 
     std::ofstream fsOut(strOutputFilePath, std::ios::out | std::ios::binary);
-    if (! fsIn.is_open()) {
+    if (!fsOut.is_open()) {
         std::stringstream ss;
         ss << "Failed to open file \"" << strOutputFilePath << "\".";
         g_strErrorMsg = ss.str();
@@ -42,7 +42,7 @@ EncryptFileAPI int EncryptFileNfg(const std::string &strInputFilePath, const std
             nSizeToOperate = nFileSize - nFilePos;
         fsIn.read(bufferIn, nSizeToOperate);
 
-        for (int i = 0; i < nSizeToOperate; ++ i) {
+        for (int i = 0; i < nSizeToOperate; ++i) {
             char sign = SIGN[i % 2];
             bufferOut[i] = bufferIn[i] + sign * KEY[i % KEY_SIZE];
         }
@@ -57,14 +57,14 @@ EncryptFileAPI int EncryptFileNfg(const std::string &strInputFilePath, const std
 
 EncryptFileAPI int DecryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath) {
     std::ifstream fsIn(strInputFilePath, std::ios::in | std::ios::binary | std::ios::ate);
-    if (! fsIn.is_open()) {
+    if (!fsIn.is_open()) {
         std::stringstream ss;
         ss << "Failed to open file \"" << strInputFilePath << "\".";
         g_strErrorMsg = ss.str();
         return -1;
     }
     std::ofstream fsOut(strOutputFilePath, std::ios::out | std::ios::binary);
-    if (! fsIn.is_open()) {
+    if (!fsOut.is_open()) {
         std::stringstream ss;
         ss << "Failed to open file \"" << strOutputFilePath << "\".";
         g_strErrorMsg = ss.str();

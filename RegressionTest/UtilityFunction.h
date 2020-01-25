@@ -4,5 +4,6 @@
 #include <string>
 
 bool TestEncryptDecrypt(const std::string &strFilePath);
+void CreateFileWithSize(const std::string &strFilePath, int size);
 
 #endif /*_ENCYPT_REGR_TEST_UTILITY_FUNCTION_H_*/
