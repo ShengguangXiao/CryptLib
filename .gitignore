@@ -44,3 +44,6 @@ RegressionTest/RegressionTest_result.txt
 *.suo
 *.bak
 *.data
+*.iobj
+*.ipdb
+.vs
