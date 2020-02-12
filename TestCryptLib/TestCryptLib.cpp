@@ -18,6 +18,6 @@ int _tmain(int argc, _TCHAR* argv[])
         DecryptFileNfg (strInputFile, strOutputFile );
     }
     
-	return 0;
+    return 0;
 }
 
