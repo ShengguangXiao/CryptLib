@@ -47,3 +47,5 @@ RegressionTest/RegressionTest_result.txt
 *.iobj
 *.ipdb
 .vs
+DecryptWidget/x64/
+*.recipe
