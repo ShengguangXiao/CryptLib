@@ -11,16 +11,10 @@ namespace fs = std::filesystem;
 
 void printHelpMsg() {
     std::cout << "Please input the folder contains encrypted image" << std::endl;
-    std::cout << "RenameFolders.exe d:\\images" << std::endl;
+    std::cout << "RenameFolders.exe d:\\images [File Extension to decrypt]" << std::endl;
 }
 
-const std::vector<std::string> vecIgnoredFiles{
-    "bmp",
-    "png",
-    "txt",
-    "log",
-    "zip"
-};
+static std::string strExtToDecrypt("ent");
 
 static bool compareChar(char c1, char c2)
 {
@@ -42,10 +36,14 @@ bool caseInSensStringCompare(const std::string& str1, const std::string& str2)
 
 int main(int argc, char *argv[])
 {
-    if (argc != 2) {
+    if (argc < 2) {
         std::cout << "Please input the folder contains the file to decrypt" << std::endl;
         printHelpMsg();
         return -1;
+    }
+
+    if (argc > 2) {
+        strExtToDecrypt = argv[2];
     }
 
     for (auto& p : fs::directory_iterator(argv[1])) {
@@ -54,15 +52,7 @@ int main(int argc, char *argv[])
 
         const std::string strEnt = p.path().string();
         const auto strExt = strEnt.substr(strEnt.size() - 3);
-        bool bSkip = false;
-        for (const auto& ignoreFileExt : vecIgnoredFiles) {
-            if (caseInSensStringCompare(strExt, ignoreFileExt)) {
-                bSkip = true;
-                break;
-            }
-        }
-
-        if (bSkip) {
+        if (!caseInSensStringCompare(strExt, strExtToDecrypt)) {
             std::cout << "File " << strEnt << " skipped" << std::endl;
             continue;
         }
@@ -77,4 +67,3 @@ int main(int argc, char *argv[])
         std::cout << "Decrypted file " << strEnt << " to " << strResult << std::endl;
     }
 }
-
