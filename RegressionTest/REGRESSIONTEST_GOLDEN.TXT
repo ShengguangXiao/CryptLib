@@ -19,6 +19,18 @@ The decrypted file is the same as original file
 Success to encrypt file ./data/NewDLPImage.bmp
 Success to decrypt file ./data/NewDLPImage.bmp.Enc
 The decrypted file is the same as original file
+Success to encrypt file ./data/OCR.png
+Success to decrypt file ./data/OCR.png.Enc
+The decrypted file is the same as original file
+Success to encrypt file ./data/F8-58-2.bmp
+Success to decrypt file ./data/F8-58-2.bmp.Enc
+The decrypted file is the same as original file
+Success to encrypt file ./data/ResultImg_DLP1_1.bmp
+Success to decrypt file ./data/ResultImg_DLP1_1.bmp.Enc
+The decrypted file is the same as original file
+Success to encrypt file ./data/NewDLPImage.bmp
+Success to decrypt file ./data/NewDLPImage.bmp.Enc
+The decrypted file is the same as original file
 Success to encrypt file ./data/createData.data
 Success to decrypt file ./data/createData.data.Enc
 The decrypted file is the same as original file

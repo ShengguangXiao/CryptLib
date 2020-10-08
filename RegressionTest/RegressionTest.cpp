@@ -15,6 +15,11 @@ int _tmain(int argc, _TCHAR* argv[])
     bPass = TestEncryptDecrypt("./data/ResultImg_DLP1_1.bmp") && bPass;
     bPass = TestEncryptDecrypt("./data/NewDLPImage.bmp") && bPass;
 
+    bPass = TestMemEncryptDecrypt("./data/OCR.png") && bPass;
+    bPass = TestMemEncryptDecrypt("./data/F8-58-2.bmp") && bPass;
+    bPass = TestMemEncryptDecrypt("./data/ResultImg_DLP1_1.bmp") && bPass;
+    bPass = TestMemEncryptDecrypt("./data/NewDLPImage.bmp") && bPass;
+
     {
         const std::string strNewCreateFile("./data/createData.data");
         CreateFileWithSize(strNewCreateFile, 8192 * 10);
