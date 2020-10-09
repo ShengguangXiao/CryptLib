@@ -34,19 +34,14 @@ bool caseInSensStringCompare(const std::string& str1, const std::string& str2)
         std::equal(str1.begin(), str1.end(), str2.begin(), &compareChar));
 }
 
-int main(int argc, char *argv[])
-{
-    if (argc < 2) {
-        std::cout << "Please input the folder contains the file to decrypt" << std::endl;
-        printHelpMsg();
-        return -1;
-    }
+int decryptFolder(const std::string& strFolder) {
+    for (auto& p : fs::directory_iterator(strFolder)) {
+        if (p.is_directory()) {
+            std::cout << "Start to decrypt subfolder " << p.path() << std::endl;
+            decryptFolder(p.path().string());
+            continue;
+        }
 
-    if (argc > 2) {
-        strExtToDecrypt = argv[2];
-    }
-
-    for (auto& p : fs::directory_iterator(argv[1])) {
         if (!p.is_regular_file())
             continue;
 
@@ -66,4 +61,20 @@ int main(int argc, char *argv[])
         }
         std::cout << "Decrypted file " << strEnt << " to " << strResult << std::endl;
     }
+    return 0;
+}
+
+int main(int argc, char *argv[])
+{
+    if (argc < 2) {
+        std::cout << "Please input the folder contains the file to decrypt" << std::endl;
+        printHelpMsg();
+        return -1;
+    }
+
+    if (argc > 2) {
+        strExtToDecrypt = argv[2];
+    }
+
+    return decryptFolder(argv[1]);
 }
