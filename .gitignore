@@ -48,4 +48,7 @@ RegressionTest/RegressionTest_result.txt
 *.ipdb
 .vs
 DecryptWidget/x64/
+DecryptTool/x64/
+Cryptlib/x64/
 *.recipe
+*.user

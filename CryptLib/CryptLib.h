@@ -8,6 +8,7 @@
 #endif
 
 #include <string>
+#include <vector>
 
 namespace AOI
 {
@@ -16,6 +17,7 @@ namespace Crypt
 
 //Return 0 means success, other wise is fail.
 EncryptFileAPI int EncryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath);
+EncryptFileAPI int EncryptMemNfg(const std::vector<unsigned char>& buf, const std::string &strOutputFilePath);
 EncryptFileAPI int DecryptFileNfg(const std::string &strInputFilePath, const std::string &strOutputFilePath);
 EncryptFileAPI std::string GetErrorMsg();
 
